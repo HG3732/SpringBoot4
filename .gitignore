@@ -3,7 +3,7 @@ bin/
 build/
 keyfiles/
 *./properties
-
+application.properties
 *.log
 
 *.ctxt

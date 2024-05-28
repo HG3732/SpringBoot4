@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kh.mclass.crawling.model.repository.CrawlingRepository">
+	<insert id="insertHotel" parameterType="CrawlingEntity">
+		INSERT INTO HOTEL VALUES (HOTEL_CODE_SEQ.NEXTVAL, #{businessNum}, #{hotelName}, #{hotelEng}, #{hotelAddress}
+		, #{hotelCall}, #{hotelCheckIn}, #{hotelCheckOut}, #{hotelPolicy}, #{hotelIntro}, #{hotelPcount})
+	</insert>
+	<insert id="insertPic" parameterType="String">
+		INSERT INTO HOTEL_PIC VALUES (HOTEL_CODE_SEQ.CURRVAL, #{innPic})
+	</insert>
+	<insert id="insertFac" parameterType="String">
+		INSERT INTO HOTEL_FACILITY VALUES (HOTEL_CODE_SEQ.CURRVAL, #{hotelFacCat})
+	</insert>
+</mapper>
